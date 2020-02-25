@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VR;
 
 public class Movement : MonoBehaviour
 {
@@ -14,21 +15,24 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-
+        
         goController = OVRInput.Controller.RTrackedRemote;
-        navAgent = gameObject.GetComponent<NavMeshAgent>();
+        navAgent = gameObject.GetComponentInParent<NavMeshAgent>();
 
-        if(navTo.activeSelf == false)
+        /*if(navTo.activeSelf == false)
         {
 
             navTo.SetActive(true);
 
-        }
+        }*/
 
     }
 
     void Update()
     {
+        OVRInput.Update();
+        
+        
         /*if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
 
@@ -45,34 +49,44 @@ public class Movement : MonoBehaviour
 
         }*/
 
+       
+
+    }
+
+    void FixedUpdate()
+    {
+        OVRInput.FixedUpdate();
+
         RaycastHit Hit;
 
-        //transform.rotation = OVRInput.GetLocalControllerRotation(goController);
+        transform.rotation = OVRInput.GetLocalControllerRotation(goController);
 
-        if (Physics.Raycast(transform.position, transform.forward, out Hit, 50))
+        if (Physics.Raycast(transform.position, transform.forward, out Hit, 20))
         {
 
-            navTo.transform.position = Hit.transform.position;
+            navTo.transform.position = Hit.point;
+            //navAgent.destination = Hit.point;
 
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad))
             {
 
-                navDest = Hit.transform;
-                navAgent.destination = Hit.transform.position;
+                Debug.Log("Button Pressed");
+                //navDest = Hit.transform;
+                navAgent.destination = Hit.point;
 
-            }                
+            }
 
         }
 
     }
 
-    private void OnDrawGizmosSelected()
+    /*private void OnDrawGizmosSelected()
     {
 
         Gizmos.color = Color.red;
 
-        Gizmos.DrawLine(transform.position, transform.forward);
+        Gizmos.DrawLine(transform.position += new Vector3(0, 0, 0), transform.forward * 10);
 
-    }
+    }*/
 
 }
