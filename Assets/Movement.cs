@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     public NavMeshAgent navAgent;
     public Transform navDest;
     public GameObject navTo;
+    public GameObject cubeOne;
+    public GameObject trackingS;
 
 
     void Start()
@@ -19,43 +21,17 @@ public class Movement : MonoBehaviour
         goController = OVRInput.Controller.RTrackedRemote;
         navAgent = gameObject.GetComponentInParent<NavMeshAgent>();
 
-        /*if(navTo.activeSelf == false)
-        {
-
-            navTo.SetActive(true);
-
-        }*/
-
     }
 
     void Update()
     {
-        OVRInput.Update();
-        
-        
-        /*if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
-        {
-
-            RaycastHit Hit;
-
-            //transform.rotation = OVRInput.GetLocalControllerRotation(goController);
-
-            if (Physics.Raycast(transform.position, transform.forward, out Hit, 50))
-            {
-                navDest = Hit.transform;
-                navAgent.destination = Hit.transform.position;
-
-            }
-
-        }*/
-
-       
+        //OVRInput.Update();
 
     }
 
     void FixedUpdate()
     {
-        OVRInput.FixedUpdate();
+        //OVRInput.FixedUpdate();
 
         RaycastHit Hit;
 
@@ -70,8 +46,8 @@ public class Movement : MonoBehaviour
             if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad))
             {
 
-                Debug.Log("Button Pressed");
-                //navDest = Hit.transform;
+                //Instantiate(cubeOne, Hit.point, Quaternion.identity);
+
                 navAgent.destination = Hit.point;
 
             }
@@ -79,14 +55,5 @@ public class Movement : MonoBehaviour
         }
 
     }
-
-    /*private void OnDrawGizmosSelected()
-    {
-
-        Gizmos.color = Color.red;
-
-        Gizmos.DrawLine(transform.position += new Vector3(0, 0, 0), transform.forward * 10);
-
-    }*/
 
 }
