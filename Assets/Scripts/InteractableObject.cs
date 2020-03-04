@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-
-
+    //Bools to identify the object it is attached to
     public bool isMushroom;
     public bool isTree;
     public bool isWater;
     public bool isFlower;
+
+    //specify how many times the object can be changed
+    public int timesRemaining;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +25,13 @@ public class InteractableObject : MonoBehaviour
        
     }
 
+
+    //As magic collides with interactable object, Do "X"
+    //Can, change material, change scale/height/width
+    //Move, destroy etc.
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag == "Magic")
+        if(col.gameObject.tag == "Magic" && timesRemaining != 0)
         {
             if (isMushroom == true)
             {
@@ -49,8 +55,8 @@ public class InteractableObject : MonoBehaviour
             }
 
         }
-
-
+        //Reduces the value to limit the amount of times the object can warp
+        timesRemaining -= 1;
 
     }
 }

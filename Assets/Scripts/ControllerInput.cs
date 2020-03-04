@@ -10,7 +10,7 @@ public class ControllerInput : MonoBehaviour
 
     public Transform controllerForwardTransform;
     public GameObject magic;
-
+    public float cooldown;
     public bool canShoot;
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class ControllerInput : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-            if (canShoot == true)
+            if (canShoot == true && cooldown <= 0)
             {
                 MagicShoot();
                 Debug.Log("shoot");
@@ -37,7 +37,7 @@ public class ControllerInput : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad))
         {
-
+            //insert movement script
         }
 
         if (OVRInput.GetDown(OVRInput.Button.One))
@@ -63,10 +63,12 @@ public class ControllerInput : MonoBehaviour
         }
 
         //Projectile Shot
-        GameObject.Instantiate(magic, controllerForwardTransform.position, controllerForwardTransform.forward);
-       // GetCompnent<Rigidbody>().AddForce.forward * 10;
-        
+        //GameObject.Instantiate(magic, controllerForwardTransform.position, controllerForwardTransform.forward);
+        // GetCompnent<Rigidbody>().AddForce.forward * 10;
+        //Add force to the instantiated object
 
-
+        //Add cooldown to magic so they cant spam and cause issues
+        //Need IEnumerator and Couroutine
+        cooldown += 1;
     }
 }
