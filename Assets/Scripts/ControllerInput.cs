@@ -23,7 +23,6 @@ public class ControllerInput : MonoBehaviour
 
     void Update()
     {
-        //transform.rotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTrackedRemote);
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
