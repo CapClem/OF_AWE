@@ -23,9 +23,10 @@ public class PlayerControlInput : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, centerEye.transform.localEulerAngles.y, 0);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
-
-            playerObject.transform.position = Vector3.Lerp(playerObject.transform.position, transform.position, 10f * Time.deltaTime);
+            
+            //If we want strafing
+            //transform.Translate(Vector3.right * speed * Time.deltaTime)
+            //playerObject.transform.position = Vector3.Lerp(playerObject.transform.position, transform.position, Time.deltaTime);
         }
  
 

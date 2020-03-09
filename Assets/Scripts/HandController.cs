@@ -49,7 +49,8 @@ public class HandController : MonoBehaviour
            
         if(canShoot)
         {
-            if(OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            //OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 objectSlot.GetComponent<InteractableObject>().magicHappens();
             }

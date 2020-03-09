@@ -9,82 +9,101 @@ public class InteractableObject : MonoBehaviour
     public bool isTree;
     public bool isWater;
     public bool isFlower;
+    public GameObject water;
+    public Vector3 theLocation;
+    public Rigidbody r;
+    public Renderer m;
 
     //specify how many times the object can be changed
     public int timesRemaining;
 
     // Start is called before the first frame update
     void Start()
-    {
+        {
+
+        r = GetComponent<Rigidbody>();
+
+        m = GetComponent<Renderer>();
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
-
-    public void magicHappens()
-    {
-        if (isMushroom == true)
-        {
-            //  gameObject.GetComponent<Transform>().Scale * 2;
+        //Sets water to be the gameobject this script is attached to
+            if (isWater == true)
+            {
+                water = gameObject;            
+            }
         }
-
-        else if (isTree == true)
+        // Update is called once per frame
+        void Update()
         {
-            //  gameObject.GetComponent<Transform>().Scale / 2;
-        }
-
-        else if (isWater == true)
-        {
-            // gameObject.GetComponent<Transform>().Scale * 2;
 
         }
 
-        else if (isFlower == true)
+
+        public void magicHappens()
         {
-            // Destroy(gameObject);
+            if (isMushroom == true)
+            {
+                m.material.SetColor("_BaseColor", Random.ColorHSV());
+
+            }
+
+            else if (isTree == true)
+            {
+                transform.localScale += new Vector3(0, 1, 0);
+            }
+
+            else if (isWater == true)
+            {
+            for (int i = 0; i < 10; i++)
+                {
+                    theLocation = (new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f)));
+                    Instantiate(water, theLocation, Quaternion.identity);
+                }
+                
+            }
+
+            else if (isFlower == true)
+            {
+                r.AddForce(Vector3.up * 500f);
+                Debug.Log("im flying");
+            }
+
+            Debug.Log("WOOOT");
         }
 
-        Debug.Log("WOOOT");
-    }
-
-    //As magic collides with interactable object, Do "X"
-    //Can, change material, change scale/height/width
-    //Move, destroy etc.
-    /*  void OnCollisionEnter(Collision col)
-      {
-          if(col.gameObject.tag == "Magic" && timesRemaining != 0)
+        //As magic collides with interactable object, Do "X"
+        //Can, change material, change scale/height/width
+        //Move, destroy etc.
+        /*  void OnCollisionEnter(Collision col)
           {
-              if (isMushroom == true)
+              if(col.gameObject.tag == "Magic" && timesRemaining != 0)
               {
-                //  gameObject.GetComponent<Transform>().Scale * 2;
-              }
+                  if (isMushroom == true)
+                  {
+                    //  gameObject.GetComponent<Transform>().Scale * 2;
+                  }
 
-              else if (isTree == true)
-              {
-                //  gameObject.GetComponent<Transform>().Scale / 2;
-              }
+                  else if (isTree == true)
+                  {
+                    //  gameObject.GetComponent<Transform>().Scale / 2;
+                  }
 
-              else if (isWater == true)
-              {
-                 // gameObject.GetComponent<Transform>().Scale * 2;
+                  else if (isWater == true)
+                  {
+                     // gameObject.GetComponent<Transform>().Scale * 2;
+
+                  }
+
+                  else if (isFlower == true)
+                  {
+                     // Destroy(gameObject);
+                  }
 
               }
-
-              else if (isFlower == true)
-              {
-                 // Destroy(gameObject);
-              }
+              //Reduces the value to limit the amount of times the object can warp
+              timesRemaining -= 1;
 
           }
-          //Reduces the value to limit the amount of times the object can warp
-          timesRemaining -= 1;
+          */
 
-      }
-      */
-
+    
 }
