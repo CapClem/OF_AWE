@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
-
+    public bool canShoot;
     public GameObject objectSlot;
     public GameObject emptySlot;
     // Start is called before the first frame update
@@ -47,6 +47,16 @@ public class HandController : MonoBehaviour
             }
         }
            
+        if(canShoot)
+        {
+            if(OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            {
+                objectSlot.GetComponent<InteractableObject>().magicHappens();
+            }
+        }
+
+
+
 
     }
 }

@@ -32,7 +32,7 @@ public class ToolTip : MonoBehaviour
 
     void OnVRExit()
     {
-        helpText.text = "";
-        tooltipText.text = "";
+        helpText.text = " ";
+        tooltipText.text = " ";
     }
 }

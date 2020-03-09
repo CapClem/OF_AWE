@@ -26,37 +26,65 @@ public class InteractableObject : MonoBehaviour
     }
 
 
+    public void magicHappens()
+    {
+        if (isMushroom == true)
+        {
+            //  gameObject.GetComponent<Transform>().Scale * 2;
+        }
+
+        else if (isTree == true)
+        {
+            //  gameObject.GetComponent<Transform>().Scale / 2;
+        }
+
+        else if (isWater == true)
+        {
+            // gameObject.GetComponent<Transform>().Scale * 2;
+
+        }
+
+        else if (isFlower == true)
+        {
+            // Destroy(gameObject);
+        }
+
+        Debug.Log("WOOOT");
+    }
+
     //As magic collides with interactable object, Do "X"
     //Can, change material, change scale/height/width
     //Move, destroy etc.
-    void OnCollisionEnter(Collision col)
-    {
-        if(col.gameObject.tag == "Magic" && timesRemaining != 0)
-        {
-            if (isMushroom == true)
-            {
-              //  gameObject.GetComponent<Transform>().Scale * 2;
-            }
+    /*  void OnCollisionEnter(Collision col)
+      {
+          if(col.gameObject.tag == "Magic" && timesRemaining != 0)
+          {
+              if (isMushroom == true)
+              {
+                //  gameObject.GetComponent<Transform>().Scale * 2;
+              }
 
-            else if (isTree == true)
-            {
-              //  gameObject.GetComponent<Transform>().Scale / 2;
-            }
+              else if (isTree == true)
+              {
+                //  gameObject.GetComponent<Transform>().Scale / 2;
+              }
 
-            else if (isWater == true)
-            {
-               // gameObject.GetComponent<Transform>().Scale * 2;
+              else if (isWater == true)
+              {
+                 // gameObject.GetComponent<Transform>().Scale * 2;
 
-            }
+              }
 
-            else if (isFlower == true)
-            {
-               // Destroy(gameObject);
-            }
+              else if (isFlower == true)
+              {
+                 // Destroy(gameObject);
+              }
 
-        }
-        //Reduces the value to limit the amount of times the object can warp
-        timesRemaining -= 1;
+          }
+          //Reduces the value to limit the amount of times the object can warp
+          timesRemaining -= 1;
 
-    }
+      }
+      */
+
 }
