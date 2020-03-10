@@ -18,19 +18,19 @@ public class InteractableObject : MonoBehaviour
     public int timesRemaining;
 
     // Start is called before the first frame update
-    void Start()
-        {
+         void Start()
+         {
 
-        r = GetComponent<Rigidbody>();
+             r = GetComponent<Rigidbody>();
 
-        m = GetComponent<Renderer>();
+            m = GetComponent<Renderer>();
         
         //Sets water to be the gameobject this script is attached to
             if (isWater == true)
-            {
+                {
                 water = gameObject;            
-            }
-        }
+                }
+         }
         // Update is called once per frame
         void Update()
         {
@@ -55,7 +55,7 @@ public class InteractableObject : MonoBehaviour
             {
             for (int i = 0; i < 10; i++)
                 {
-                    theLocation = (new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f)));
+                    theLocation = (water.transform.position - new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f)));
                     Instantiate(water, theLocation, Quaternion.identity);
                 }
                 
