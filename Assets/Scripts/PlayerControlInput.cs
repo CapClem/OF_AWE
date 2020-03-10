@@ -17,8 +17,8 @@ public class PlayerControlInput : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        //OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad
+    {   //Input.GetKeyDown(KeyCode.UpArrow)
+        //OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad)
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             transform.eulerAngles = new Vector3(0, centerEye.transform.localEulerAngles.y, 0);

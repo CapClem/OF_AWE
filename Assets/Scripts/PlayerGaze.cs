@@ -19,7 +19,7 @@ public class PlayerGaze : MonoBehaviour
 
     public void GazeEnter()
     {
-        Debug.Log("Enter");
+        Debug.Log("Gaze Entered");
         //Create timer, which starts s the player looks at the STATUE
         //At the same time, start a function which plays the music and animations
         //for showing the power gain
@@ -30,10 +30,10 @@ public class PlayerGaze : MonoBehaviour
 
     public void GazeExit()
     {
-        Debug.Log("Exit");
+        Debug.Log("Gaze Exited");
         //Statue, If timer is active, Stop timer.
         //For everything else Remove the cursor on HUD
-        //
+        // 
         
     }
 }
