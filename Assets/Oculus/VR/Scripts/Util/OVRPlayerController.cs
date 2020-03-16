@@ -339,12 +339,6 @@ public class OVRPlayerController : MonoBehaviour
 				dpad_move = true;
 			}
 
-			if (OVRInput.Get(OVRInput.Button.One))
-            {
-				moveForward = true;
-				dpad_move = true;
-            }
-
 			MoveScale = 1.0f;
 
 			if ((moveForward && moveLeft) || (moveForward && moveRight) ||

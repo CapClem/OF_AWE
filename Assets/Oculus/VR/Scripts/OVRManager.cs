@@ -817,6 +817,30 @@ public class OVRManager : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// Let the system decide the best foveation level adaptively (Off .. fixedFoveatedRenderingLevel)
+	/// This feature is only supported on QCOMM-based Android devices
+	/// </summary>
+	public static bool useDynamicFixedFoveatedRendering
+	{
+		get
+		{
+			if (!OVRPlugin.fixedFoveatedRenderingSupported)
+			{
+				Debug.LogWarning("Fixed Foveated Rendering feature is not supported");
+			}
+			return OVRPlugin.useDynamicFixedFoveatedRendering;
+		}
+		set
+		{
+			if (!OVRPlugin.fixedFoveatedRenderingSupported)
+			{
+				Debug.LogWarning("Fixed Foveated Rendering feature is not supported");
+			}
+			OVRPlugin.useDynamicFixedFoveatedRendering = value;
+		}
+	}
+
 	[Obsolete("Please use fixedFoveatedRenderingSupported instead", false)]
 	public static bool tiledMultiResSupported
 	{
@@ -1453,9 +1477,9 @@ public class OVRManager : MonoBehaviour
 
 		if (useRecommendedMSAALevel && QualitySettings.antiAliasing != display.recommendedMSAALevel)
 		{
-			//Debug.Log("The current MSAA level is " + QualitySettings.antiAliasing +
-			//", but the recommended MSAA level is " + display.recommendedMSAALevel +
-			//". Switching to the recommended level.");
+			Debug.Log("The current MSAA level is " + QualitySettings.antiAliasing +
+			", but the recommended MSAA level is " + display.recommendedMSAALevel +
+			". Switching to the recommended level.");
 
 			QualitySettings.antiAliasing = display.recommendedMSAALevel;
 		}
