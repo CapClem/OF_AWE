@@ -6,7 +6,9 @@ public class InteractableObject : MonoBehaviour
 {
     //Bools to identify the object it is attached to
     public bool isMushroom;
-    public bool isTree;
+    public bool isBirch;
+    public bool isOak;
+    public bool isWillow;
     public bool isWater;
     public bool isFlower;
     public GameObject water;
@@ -46,7 +48,7 @@ public class InteractableObject : MonoBehaviour
 
             }
 
-            else if (isTree == true)
+            else if (isBirch == true)
             {
                 transform.localScale += new Vector3(0, 1, 0);
             }
@@ -67,7 +69,18 @@ public class InteractableObject : MonoBehaviour
                 Debug.Log("im flying");
             }
 
-            Debug.Log("WOOOT");
+            else if (isOak == true)
+            {
+                transform.localScale += new Vector3(0, 1, 0);
+            }
+
+            else if (isWillow == true)
+            {
+                transform.localScale += new Vector3(0, 1, 0);
+            }
+
+
+        Debug.Log("WOOOT");
         }
 
         //As magic collides with interactable object, Do "X"
