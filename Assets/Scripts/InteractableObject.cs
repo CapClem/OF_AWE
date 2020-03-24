@@ -11,10 +11,16 @@ public class InteractableObject : MonoBehaviour
     public bool isWillow;
     public bool isWater;
     public bool isFlower;
+    public bool isPine;
+    public bool isNewFlower;
     public GameObject water;
-    public Vector3 theLocation;
-    public Rigidbody r;
-    public Renderer m;
+    public GameObject mushTop;
+    private Vector3 theLocation;
+    private Rigidbody r;
+    private Renderer m;
+    public int rotSpeed;
+    public float jumpHeight;
+    
 
     //specify how many times the object can be changed
     public int timesRemaining;
@@ -24,13 +30,17 @@ public class InteractableObject : MonoBehaviour
          {
 
              r = GetComponent<Rigidbody>();
-
-            m = GetComponent<Renderer>();
+             m = mushTop.GetComponent<Renderer>();
         
         //Sets water to be the gameobject this script is attached to
             if (isWater == true)
                 {
-                water = gameObject;            
+                    water = gameObject;            
+                }
+
+            if (isNewFlower == true)
+                {
+                    r.AddForce(Vector3.up * jumpHeight);
                 }
          }
         // Update is called once per frame
@@ -39,8 +49,17 @@ public class InteractableObject : MonoBehaviour
 
         }
 
+        void FixedUpdate()
+        {
+            if (isFlower == true && r.velocity.magnitude > 0.05f)
+            {
+                transform.Rotate(0, 5f, 0);
+            }
+                
+        }
 
-        public void magicHappens()
+
+    public void magicHappens()
         {
             if (isMushroom == true)
             {
@@ -65,8 +84,9 @@ public class InteractableObject : MonoBehaviour
 
             else if (isFlower == true)
             {
-                r.AddForce(Vector3.up * 500f);
+                r.AddForce(Vector3.up * jumpHeight);
                 Debug.Log("im flying");
+
             }
 
             else if (isOak == true)
@@ -79,44 +99,18 @@ public class InteractableObject : MonoBehaviour
                 transform.localScale += new Vector3(0, 1, 0);
             }
 
+            else if (isPine == true)
+            {
+                transform.localScale += new Vector3(0, 1, 0);
+            }
+
 
         Debug.Log("WOOOT");
         }
 
-        //As magic collides with interactable object, Do "X"
-        //Can, change material, change scale/height/width
-        //Move, destroy etc.
-        /*  void OnCollisionEnter(Collision col)
-          {
-              if(col.gameObject.tag == "Magic" && timesRemaining != 0)
-              {
-                  if (isMushroom == true)
-                  {
-                    //  gameObject.GetComponent<Transform>().Scale * 2;
-                  }
+  
+    
 
-                  else if (isTree == true)
-                  {
-                    //  gameObject.GetComponent<Transform>().Scale / 2;
-                  }
-
-                  else if (isWater == true)
-                  {
-                     // gameObject.GetComponent<Transform>().Scale * 2;
-
-                  }
-
-                  else if (isFlower == true)
-                  {
-                     // Destroy(gameObject);
-                  }
-
-              }
-              //Reduces the value to limit the amount of times the object can warp
-              timesRemaining -= 1;
-
-          }
-          */
 
     
 }
