@@ -4,14 +4,41 @@ using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
-    public bool canShoot;
+    public bool stopIntrActOnStopShoot = true;
+    //public bool canShoot;
+    public bool CanShoot => player?.HasMagic ?? false;
+
+    public ParticleSystem shootParticleSys;
+    public ParticleSystem hasMagicParticleSys;
+    
     public GameObject objectSlot;
     public GameObject emptySlot;
+
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
         emptySlot = new GameObject();
         objectSlot = emptySlot;
+
+        if (player == null)
+        {
+            player = FindObjectOfType<Player>();
+        }
+        if(player != null)
+            player.OnHasMagicStateChanged += HasMagicChanged;
+    }
+
+    private void HasMagicChanged(bool hasMagic)
+    {
+        if (hasMagic && !hasMagicParticleSys.isPlaying)
+        {
+            hasMagicParticleSys?.Play();
+        }
+        else
+        {
+            hasMagicParticleSys?.Stop();
+        }
     }
 
     // Update is called once per frame
@@ -47,14 +74,23 @@ public class HandController : MonoBehaviour
             }
         }
            
-        if(canShoot)
+        if(CanShoot)
         {   //Input.GetKeyDown(KeyCode.UpArrow
             //OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger)
             
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                objectSlot.GetComponent<InteractableObject>().magicHappens();
+                shootParticleSys?.Play();
+                objectSlot?.GetComponent<InteractableObject>()?.magicHappens();
             }
+        }
+
+        if (Input.GetKeyUp(KeyCode.UpArrow) || !CanShoot)
+        {
+            if(stopIntrActOnStopShoot)
+                objectSlot?.GetComponent<InteractableObject>()?.StopMagic(); // TODO 
+            shootParticleSys?.Stop();
+            shootParticleSys?.Clear();
         }
 
 

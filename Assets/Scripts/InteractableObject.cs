@@ -20,97 +20,109 @@ public class InteractableObject : MonoBehaviour
     private Renderer m;
     public int rotSpeed;
     public float jumpHeight;
+
+    public InteractableEffect interactableEffect;
     
 
     //specify how many times the object can be changed
     public int timesRemaining;
 
     // Start is called before the first frame update
-         void Start()
-         {
+     void Start()
+     {
 
-             r = GetComponent<Rigidbody>();
-             m = mushTop.GetComponent<Renderer>();
-        
+         r = GetComponent<Rigidbody>();
+         if(mushTop != null)
+            m = mushTop.GetComponent<Renderer>();
+
+         if (interactableEffect == null)
+             interactableEffect = GetComponent<InteractableEffect>();
+    
         //Sets water to be the gameobject this script is attached to
-            if (isWater == true)
-                {
-                    water = gameObject;            
-                }
-
-            if (isNewFlower == true)
-                {
-                    r.AddForce(Vector3.up * jumpHeight);
-                }
-         }
-        // Update is called once per frame
-        void Update()
+        if (isWater == true)
         {
-
+            water = gameObject;            
         }
 
-        void FixedUpdate()
+        if (isNewFlower == true)
         {
-            if (isFlower == true && r.velocity.magnitude > 0.05f)
-            {
-                transform.Rotate(0, 5f, 0);
-            }
-                
+            r.AddForce(Vector3.up * jumpHeight);
         }
+     }
+     
+    // Update is called once per frame
+    void Update()
+    {
 
+    }
+
+    void FixedUpdate()
+    {
+        if (isFlower == true && r.velocity.magnitude > 0.05f)
+        {
+            transform.Rotate(0, 5f, 0);
+        }
+            
+    }
+
+    public void StopMagic()
+    {
+        interactableEffect?.Stop();
+    }
 
     public void magicHappens()
+    {
+        interactableEffect?.PlayEffect();
+        
+        // Woot Woot Say Da Whooot
+        
+        
+        if (isMushroom == true)
         {
-            if (isMushroom == true)
-            {
-                m.material.SetColor("_BaseColor", Random.ColorHSV());
+            m.material.SetColor("_BaseColor", Random.ColorHSV());
 
-            }
+        }
 
-            else if (isBirch == true)
-            {
-                transform.localScale += new Vector3(0, 1, 0);
-            }
+        else if (isBirch == true)
+        {
+            transform.localScale += new Vector3(0, 1, 0);
+        }
 
-            else if (isWater == true)
-            {
+        else if (isWater == true)
+        {
             for (int i = 0; i < 10; i++)
-                {
-                    theLocation = (water.transform.position - new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f)));
-                    Instantiate(water, theLocation, Quaternion.identity);
-                }
-                
-            }
-
-            else if (isFlower == true)
             {
-                r.AddForce(Vector3.up * jumpHeight);
-                Debug.Log("im flying");
-
+                theLocation = (water.transform.position - new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f)));
+                Instantiate(water, theLocation, Quaternion.identity);
             }
+            
+        }
 
-            else if (isOak == true)
-            {
-                transform.localScale += new Vector3(0, 1, 0);
-            }
+        else if (isFlower == true)
+        {
+            r.AddForce(Vector3.up * jumpHeight);
+            Debug.Log("im flying");
 
-            else if (isWillow == true)
-            {
-                transform.localScale += new Vector3(0, 1, 0);
-            }
+        }
 
-            else if (isPine == true)
-            {
-                transform.localScale += new Vector3(0, 1, 0);
-            }
+        else if (isOak == true)
+        {
+            transform.localScale += new Vector3(0, 1, 0);
+        }
+
+        else if (isWillow == true)
+        {
+            transform.localScale += new Vector3(0, 1, 0);
+        }
+
+        else if (isPine == true)
+        {
+            transform.localScale += new Vector3(0, 1, 0);
+        }
 
 
         Debug.Log("WOOOT");
-        }
-
-  
-    
+    }
 
 
-    
 }
