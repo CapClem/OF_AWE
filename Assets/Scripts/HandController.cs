@@ -73,19 +73,18 @@ public class HandController : MonoBehaviour
                 objectSlot = emptySlot;
             }
         }
-           
-        if(CanShoot)
-        {   //Input.GetKeyDown(KeyCode.UpArrow
-            //OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger)
-            
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+
+        //FOR KEYBOARD
+        if (CanShoot)
+        {          
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 shootParticleSys?.Play();
                 objectSlot?.GetComponent<InteractableObject>()?.magicHappens();
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.UpArrow) || !CanShoot)
+        if (Input.GetKeyUp(KeyCode.Z) || !CanShoot)
         {
             if(stopIntrActOnStopShoot)
                 objectSlot?.GetComponent<InteractableObject>()?.StopMagic(); // TODO 
@@ -93,8 +92,22 @@ public class HandController : MonoBehaviour
             shootParticleSys?.Clear();
         }
 
+        // FOR OVR
+        if (CanShoot)
+        {  
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            {
+                shootParticleSys?.Play();
+                objectSlot?.GetComponent<InteractableObject>()?.magicHappens();
+            }
+        }
 
-
-
+        if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger) || !CanShoot)
+        {
+            if (stopIntrActOnStopShoot)
+                objectSlot?.GetComponent<InteractableObject>()?.StopMagic(); // TODO 
+            shootParticleSys?.Stop();
+            shootParticleSys?.Clear();
+        }
     }
 }
