@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     //Bools to identify the object it is attached to
+    [Header("Type Settings")]
     public bool isMushroom;
     public bool isBirch;
     public bool isOak;
@@ -12,57 +13,126 @@ public class InteractableObject : MonoBehaviour
     public bool isWater;
     public bool isFlower;
     public bool isPine;
-    public bool isNewFlower;
+    public bool isRock;
+    
+
+    //Water/Dupe
+    [Header("Water/Duplication Settings")]
     public GameObject water;
-    public GameObject mushTop;
     private Vector3 theLocation;
-    private Rigidbody r;
-    private Renderer m;
-    public int rotSpeed;
+
+    //Mushrooms
+    [Header("Mushroom Settings")]
+    public Renderer m;
+    public GameObject mushTop;
+
+    //Flowers
+    [Header("Flower Settings")]
     public float jumpHeight;
+    public Rigidbody r;
+
+    //Rocks
+    [Header("Rock Settings")]
+    public float degreesPerSecond = 15.0f;
+    public float amplitude = 0.5f;
+    public float frequency = 1f;
+    private Vector3 posOffset = new Vector3();
+    private Vector3 tempPos = new Vector3();
+    public bool magicRock;
+    public bool hasRisen;
+    public GameObject rock;
+    public Vector3 startPos;
+    public Vector3 endPos;
+    private float lerpTime = 3;
+    private float currentLerpTime = 0;
+    public float distance;
 
     public InteractableEffect interactableEffect;
     
 
-    //specify how many times the object can be changed
+    //Specify how many times the object can be changed
     public int timesRemaining;
 
     // Start is called before the first frame update
      void Start()
      {
+        //RockStart
+        rock = gameObject;
+        distance = Random.Range(4f, 8f);
+        startPos = rock.transform.position;
+        endPos = rock.transform.position + Vector3.up * distance;
+        posOffset = endPos;
 
-         r = GetComponent<Rigidbody>();
-         if(mushTop != null)
+        //FlowerStart
+        if (isFlower == true)
+        {
+            r = GetComponent<Rigidbody>();
+        }
+       
+
+        //MushroomStart
+        if(isMushroom == true)
+        {
             m = mushTop.GetComponent<Renderer>();
+        }
+        
 
          if (interactableEffect == null)
              interactableEffect = GetComponent<InteractableEffect>();
     
-        //Sets water to be the gameobject this script is attached to
+        //Water/DupeStart
         if (isWater == true)
         {
-            water = gameObject;            
-        }
-
-        if (isNewFlower == true)
-        {
-            r.AddForce(Vector3.up * jumpHeight);
+            water = gameObject;
+            //r.AddForce(Vector3.up * jumpHeight);
         }
      }
      
     // Update is called once per frame
     void Update()
     {
+        
+        
+        //Rockstuff
+        if (magicRock == true)
+        {
+            if (hasRisen == false)
+            {
+                currentLerpTime += Time.deltaTime;
+                if (currentLerpTime >= lerpTime)
+                {
+                    currentLerpTime = lerpTime;
+                }
+
+                float Perc = currentLerpTime / lerpTime;
+                rock.transform.position = Vector3.Lerp(startPos, endPos, Perc);
+
+            }
+            else
+            {
+                transform.Rotate(new Vector3(Time.deltaTime * degreesPerSecond, Time.deltaTime * degreesPerSecond, Time.deltaTime * degreesPerSecond), Space.World);
+                tempPos = posOffset;
+                tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+                transform.position = tempPos;
+            }
+
+             if (rock.transform.position == endPos)
+             {
+                 hasRisen = true;
+             }
+             
+        }
+
 
     }
 
     void FixedUpdate()
     {
-        if (isFlower == true && r.velocity.magnitude > 0.05f)
+        if (isFlower && r.velocity.magnitude > 0.15f)
         {
             transform.Rotate(0, 5f, 0);
-        }
-            
+        }   
+
     }
 
     public void StopMagic()
@@ -76,16 +146,9 @@ public class InteractableObject : MonoBehaviour
         
         // Woot Woot Say Da Whooot
         
-        
         if (isMushroom == true)
         {
             m.material.SetColor("_BaseColor", Random.ColorHSV());
-
-        }
-
-        else if (isBirch == true)
-        {
-            transform.localScale += new Vector3(0, 1, 0);
         }
 
         else if (isWater == true)
@@ -118,6 +181,17 @@ public class InteractableObject : MonoBehaviour
         else if (isPine == true)
         {
             transform.localScale += new Vector3(0, 1, 0);
+        }
+
+        else if (isBirch == true)
+        {
+            transform.localScale += new Vector3(0, 1, 0);
+        }
+
+        else if (isRock == true)
+        {
+            magicRock = true;
+
         }
 
 
