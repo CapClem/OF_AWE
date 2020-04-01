@@ -27,5 +27,5 @@ Material:
     - Vector1_DF7513FE: 6
     - Vector1_E199F421: 100
     m_Colors:
-    - Color_A2DC387B: {r: 0, g: 0.70835733, b: 1, a: 0}
-    - Color_E46670A5: {r: 1, g: 1, b: 1, a: 0}
+    - Color_A2DC387B: {r: 0, g: 0.6431373, b: 0.5422616, a: 0}
+    - Color_E46670A5: {r: 1, g: 1, b: 1, a: 1}
