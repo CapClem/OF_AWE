@@ -23,15 +23,11 @@ public class InteractableObject : MonoBehaviour
 
     //Mushrooms
     [Header("Mushroom Settings")]
-    [SerializeField] [Range(0f, 1f)] float mushlerpTime;
-    [SerializeField] Color[] myColors;
-    int colorIndex = 0;
-    float mushTime = 0f;
     public Renderer m;
     public GameObject mushTop;
     private bool magicMush;
-    int len;
-    public Material mMaterial;
+    public Material matA;
+    public Material matB;
 
     //Flowers
     [Header("Flower Settings")]
@@ -93,8 +89,6 @@ public class InteractableObject : MonoBehaviour
         if(isMushroom == true)
         {
             m = mushTop.GetComponent<Renderer>();
-            len = myColors.Length;
-            Material mMaterial = new Material(m.sharedMaterial);
         }
 
 
@@ -116,19 +110,7 @@ public class InteractableObject : MonoBehaviour
     {
         if(magicMush == true)
         {
-            m.material.color = Color.Lerp(m.material.color, myColors[colorIndex], mushlerpTime * Time.deltaTime);
-            //m.material.SetColor("_BaseColor", Color.Lerp(m.material.color, myColors[colorIndex], mushlerpTime * Time.deltaTime));
-            mushTime = Mathf.Lerp(mushTime, 1f, mushlerpTime * Time.deltaTime);
-            
-            if (mushTime > .9f)
-            {
-                mushTime = 0f;
-                colorIndex++;
-                if (colorIndex >= len)
-                {
-                    colorIndex = 0;
-                }
-            }
+            m.material = matB;
         }
 
 
