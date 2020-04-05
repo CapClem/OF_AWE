@@ -23,8 +23,15 @@ public class InteractableObject : MonoBehaviour
 
     //Mushrooms
     [Header("Mushroom Settings")]
+    [SerializeField] [Range(0f, 1f)] float mushlerpTime;
+    [SerializeField] Color[] myColors;
+    int colorIndex = 0;
+    float mushTime = 0f;
     public Renderer m;
     public GameObject mushTop;
+    private bool magicMush;
+    int len;
+    public Material mMaterial;
 
     //Flowers
     [Header("Flower Settings")]
@@ -47,15 +54,27 @@ public class InteractableObject : MonoBehaviour
     private float currentLerpTime = 0;
     public float distance;
 
-    public InteractableEffect interactableEffect;
-    
+    //Trees
+    [Header("Tree Settings")]
+    Vector3 minScale;
+    public Vector3 maxScale;
+    private int grown;
+    public float speed = 2f;
+    public float duration = 5f;
+    private bool magicBirch;
+    private float treelerpTime = 3;
+    private float growthRate = 0;
 
-    //Specify how many times the object can be changed
-    public int timesRemaining;
+    public InteractableEffect interactableEffect;
 
     // Start is called before the first frame update
      void Start()
      {
+        //TreeStart
+        minScale = transform.localScale;
+        
+
+
         //RockStart
         rock = gameObject;
         distance = Random.Range(4f, 8f);
@@ -74,7 +93,11 @@ public class InteractableObject : MonoBehaviour
         if(isMushroom == true)
         {
             m = mushTop.GetComponent<Renderer>();
+            len = myColors.Length;
+            Material mMaterial = new Material(m.sharedMaterial);
         }
+
+
         
 
          if (interactableEffect == null)
@@ -91,7 +114,38 @@ public class InteractableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(magicMush == true)
+        {
+            m.material.color = Color.Lerp(m.material.color, myColors[colorIndex], mushlerpTime * Time.deltaTime);
+            //m.material.SetColor("_BaseColor", Color.Lerp(m.material.color, myColors[colorIndex], mushlerpTime * Time.deltaTime));
+            mushTime = Mathf.Lerp(mushTime, 1f, mushlerpTime * Time.deltaTime);
+            
+            if (mushTime > .9f)
+            {
+                mushTime = 0f;
+                colorIndex++;
+                if (colorIndex >= len)
+                {
+                    colorIndex = 0;
+                }
+            }
+        }
+
+
+
+        //BirchStuff
+        if (magicBirch == true)
+        {
+
+            growthRate += Time.deltaTime;
+            if (growthRate >= treelerpTime)
+            {
+                growthRate = treelerpTime;
+            }
+
+            float treePerc = growthRate / treelerpTime;
+            transform.localScale = Vector3.Lerp(minScale, maxScale, treePerc);
+        }
         
         //Rockstuff
         if (magicRock == true)
@@ -148,7 +202,8 @@ public class InteractableObject : MonoBehaviour
         
         if (isMushroom == true)
         {
-            m.material.SetColor("_BaseColor", Random.ColorHSV());
+            //m.material.SetColor("_BaseColor", Random.ColorHSV());
+            magicMush = true;
         }
 
         else if (isWater == true)
@@ -185,7 +240,7 @@ public class InteractableObject : MonoBehaviour
 
         else if (isBirch == true)
         {
-            transform.localScale += new Vector3(0, 1, 0);
+            magicBirch = true;
         }
 
         else if (isRock == true)
