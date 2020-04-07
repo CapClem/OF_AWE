@@ -25,10 +25,8 @@ public class ExampleInteractableEffect : InteractableEffect
 
     protected override IEnumerator EffectCoroutine()
     {
-        audioSource.Play(); // Start(Play) Audio Source (For example an ambient "background music" for the duration of the effect)
-        
-        
-        someParticleSystem?.Play(); // Play some particle system
+        //audioSource.Play(); // Start(Play) Audio Source (For example an ambient "background music" for the duration of the effect)
+        //someParticleSystem?.Play(); // Play some particle system
         
         yield return new WaitForSeconds(3f); // Wait for 3 seconds
         

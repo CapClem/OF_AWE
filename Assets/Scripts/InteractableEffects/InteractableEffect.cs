@@ -42,4 +42,5 @@ public abstract class InteractableEffect : MonoBehaviour
 
     protected abstract IEnumerator EffectCoroutine();
     protected abstract void ResetEffect();
+    
 }

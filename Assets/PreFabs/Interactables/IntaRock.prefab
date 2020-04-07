@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 1948998806889108572}
   - component: {fileID: 8130348809826254840}
   - component: {fileID: 2919982876780801118}
+  - component: {fileID: 5420703967801318062}
   - component: {fileID: 5714023230549820462}
   - component: {fileID: 5714023230549820449}
   - component: {fileID: 5714023230549820448}
   - component: {fileID: 5714023230549820463}
+  - component: {fileID: -1680902387815109013}
   m_Layer: 0
   m_Name: IntaRock
   m_TagString: Interactable
@@ -82,6 +84,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5420703967801318062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714023230549820451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0aba9fb33f7f744a8d140fdf07e0046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  particlesSystem: {fileID: 0}
 --- !u!114 &5714023230549820462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMushroom: 0
-  isBirch: 0
+  isTree: 0
   isOak: 0
   isWillow: 0
   isWater: 0
@@ -105,6 +122,9 @@ MonoBehaviour:
   water: {fileID: 0}
   m: {fileID: 0}
   mushTop: {fileID: 0}
+  magicMush: 0
+  matA: {fileID: 0}
+  matB: {fileID: 0}
   jumpHeight: 0
   r: {fileID: 0}
   degreesPerSecond: 30
@@ -115,8 +135,12 @@ MonoBehaviour:
   rock: {fileID: 5714023230549820451}
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
+  distance: 0
+  maxScale: {x: 0, y: 0, z: 0}
+  speed: 2
+  duration: 5
+  magicTree: 0
   interactableEffect: {fileID: 0}
-  timesRemaining: 2
 --- !u!114 &5714023230549820449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +186,99 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08735561, y: 0.057248384, z: 0.09395233}
   m_Center: {x: -0.0019083265, y: 0.028389633, z: 0.00002971664}
+--- !u!82 &-1680902387815109013
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714023230549820451}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

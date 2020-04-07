@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 256857754875354255}
   - component: {fileID: 256857754875354254}
   - component: {fileID: 256857754875354241}
+  - component: {fileID: 908156950192055054}
   m_Layer: 0
   m_Name: IntaMushTall
   m_TagString: Interactable
@@ -48,6 +49,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77398644dd2433945b73c01e0bf3cd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPowerChargeTime: 10
+  playerPowerChannelingAnimTarget: {fileID: 0}
+  playerPowerTransmissionAnimTarget: {fileID: 0}
+  gazeActive: 0
+  starredPowerObject: {fileID: 0}
+  activeGazeTime: 0
+  activeGazeMagicGained: 0
 --- !u!114 &256857754875354255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,18 +69,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMushroom: 1
-  isBirch: 0
+  isTree: 0
   isOak: 0
   isWillow: 0
   isWater: 0
   isFlower: 0
   isPine: 0
+  isRock: 0
   water: {fileID: 0}
-  mushTop: {fileID: 3665215998879982517}
-  theLocation: {x: 0, y: 0, z: 0}
-  r: {fileID: 0}
   m: {fileID: 0}
-  timesRemaining: 2
+  mushTop: {fileID: 3665215998879982517}
+  magicMush: 0
+  matA: {fileID: 0}
+  matB: {fileID: 2100000, guid: 9bbd89fb5798bbc429589d5af0fdbd72, type: 2}
+  jumpHeight: 0
+  r: {fileID: 0}
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
+  magicRock: 0
+  hasRisen: 0
+  rock: {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  distance: 0
+  maxScale: {x: 0, y: 0, z: 0}
+  speed: 2
+  duration: 5
+  magicTree: 0
+  interactableEffect: {fileID: 0}
 --- !u!114 &256857754875354254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +127,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.051890887, y: 0.2085233, z: 0.05019575}
   m_Center: {x: -0.000053566695, y: 0.112223946, z: -0.00071347057}
+--- !u!114 &908156950192055054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256857754875354253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0aba9fb33f7f744a8d140fdf07e0046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  particlesSystem: {fileID: 0}
 --- !u!1 &3253851763793330866
 GameObject:
   m_ObjectHideFlags: 0

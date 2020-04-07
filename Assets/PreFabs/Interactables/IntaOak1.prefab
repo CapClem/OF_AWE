@@ -991,6 +991,7 @@ GameObject:
   - component: {fileID: 9071311910054408968}
   - component: {fileID: 9071311910054408967}
   - component: {fileID: 9071311910054408966}
+  - component: {fileID: 1192296755182531399}
   m_Layer: 0
   m_Name: IntaOak1
   m_TagString: Interactable
@@ -1083,6 +1084,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77398644dd2433945b73c01e0bf3cd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPowerChargeTime: 10
+  playerPowerChannelingAnimTarget: {fileID: 0}
+  playerPowerTransmissionAnimTarget: {fileID: 0}
+  gazeActive: 0
+  starredPowerObject: {fileID: 0}
+  activeGazeTime: 0
+  activeGazeMagicGained: 0
 --- !u!114 &9071311910054408967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,16 +1104,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMushroom: 0
-  isBirch: 0
+  isTree: 0
   isOak: 1
   isWillow: 0
   isWater: 0
   isFlower: 0
+  isPine: 0
+  isRock: 0
   water: {fileID: 0}
-  theLocation: {x: 0, y: 0, z: 0}
-  r: {fileID: 0}
   m: {fileID: 0}
-  timesRemaining: 2
+  mushTop: {fileID: 0}
+  magicMush: 0
+  matA: {fileID: 0}
+  matB: {fileID: 0}
+  jumpHeight: 0
+  r: {fileID: 0}
+  degreesPerSecond: 15
+  amplitude: 0.5
+  frequency: 1
+  magicRock: 0
+  hasRisen: 0
+  rock: {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  distance: 0
+  maxScale: {x: 0, y: 0, z: 0}
+  speed: 2
+  duration: 5
+  magicTree: 0
+  interactableEffect: {fileID: 0}
 --- !u!114 &9071311910054408966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,3 +1149,18 @@ MonoBehaviour:
   tooltipText: {fileID: 0}
   helpString: I AM PROFESSOR OAK
   tooltipString: I like you more than my grandson
+--- !u!114 &1192296755182531399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071311910054408965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0aba9fb33f7f744a8d140fdf07e0046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
+  particlesSystem: {fileID: 0}

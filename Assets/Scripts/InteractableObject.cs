@@ -7,7 +7,7 @@ public class InteractableObject : MonoBehaviour
     //Bools to identify the object it is attached to
     [Header("Type Settings")]
     public bool isMushroom;
-    public bool isBirch;
+    public bool isTree;
     public bool isOak;
     public bool isWillow;
     public bool isWater;
@@ -25,7 +25,7 @@ public class InteractableObject : MonoBehaviour
     [Header("Mushroom Settings")]
     public Renderer m;
     public GameObject mushTop;
-    private bool magicMush;
+    public bool magicMush;
     public Material matA;
     public Material matB;
 
@@ -57,11 +57,11 @@ public class InteractableObject : MonoBehaviour
     private int grown;
     public float speed = 2f;
     public float duration = 5f;
-    private bool magicBirch;
+    public bool magicTree;
     private float treelerpTime = 3;
     private float growthRate = 0;
 
-    public InteractableEffect interactableEffect;
+    public MagicBurst interactableEffect;
 
     // Start is called before the first frame update
      void Start()
@@ -95,7 +95,7 @@ public class InteractableObject : MonoBehaviour
         
 
          if (interactableEffect == null)
-             interactableEffect = GetComponent<InteractableEffect>();
+             interactableEffect = GetComponent<MagicBurst>();
     
         //Water/DupeStart
         if (isWater == true)
@@ -116,7 +116,7 @@ public class InteractableObject : MonoBehaviour
 
 
         //BirchStuff
-        if (magicBirch == true)
+        if (magicTree == true)
         {
 
             growthRate += Time.deltaTime;
@@ -173,67 +173,11 @@ public class InteractableObject : MonoBehaviour
 
     public void StopMagic()
     {
-        interactableEffect?.Stop();
+        //interactableEffect?.Stop();
     }
 
     public void magicHappens()
     {
         interactableEffect?.PlayEffect();
-        
-        // Woot Woot Say Da Whooot
-        
-        if (isMushroom == true)
-        {
-            //m.material.SetColor("_BaseColor", Random.ColorHSV());
-            magicMush = true;
-        }
-
-        else if (isWater == true)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                theLocation = (water.transform.position - new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f)));
-                Instantiate(water, theLocation, Quaternion.identity);
-            }
-            
-        }
-
-        else if (isFlower == true)
-        {
-            r.AddForce(Vector3.up * jumpHeight);
-            Debug.Log("im flying");
-
-        }
-
-        else if (isOak == true)
-        {
-            transform.localScale += new Vector3(0, 1, 0);
-        }
-
-        else if (isWillow == true)
-        {
-            transform.localScale += new Vector3(0, 1, 0);
-        }
-
-        else if (isPine == true)
-        {
-            transform.localScale += new Vector3(0, 1, 0);
-        }
-
-        else if (isBirch == true)
-        {
-            magicBirch = true;
-        }
-
-        else if (isRock == true)
-        {
-            magicRock = true;
-
-        }
-
-
-        Debug.Log("WOOOT");
     }
-
-
 }
