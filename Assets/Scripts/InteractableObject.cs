@@ -180,4 +180,9 @@ public class InteractableObject : MonoBehaviour
     {
         interactableEffect?.PlayEffect();
     }
+
+    public void flowerJump()
+    {
+        r.AddForce(Vector3.up * jumpHeight);
+    }
 }

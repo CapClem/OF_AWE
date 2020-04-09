@@ -5,14 +5,20 @@ using UnityEngine;
 public class HandController : MonoBehaviour
 {
     public bool stopIntrActOnStopShoot = true;
-    //public bool canShoot;
+    //public bool CanShoot;
     public bool CanShoot => player?.HasMagic ?? false;
 
     public ParticleSystem shootParticleSys;
     public ParticleSystem hasMagicParticleSys;
-    
+
+    [Header("Interactable Object Slots")]
     public GameObject objectSlot;
     public GameObject emptySlot;
+
+    [Header("Projectile Settings")]
+    public GameObject magicProjectile;
+    public GameObject magicspawnLocation;
+    public RaycastHit hit;
 
     public Player player;
     // Start is called before the first frame update
@@ -79,7 +85,9 @@ public class HandController : MonoBehaviour
         {          
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                shootParticleSys?.Play();
+                //shootParticleSys?.Play();
+                GameObject newProj;
+                newProj = Instantiate(magicProjectile, magicspawnLocation.transform.position, Quaternion.identity);
                 objectSlot?.GetComponent<InteractableObject>()?.magicHappens();
             }
         }

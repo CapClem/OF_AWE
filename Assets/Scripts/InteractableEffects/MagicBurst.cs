@@ -30,16 +30,16 @@ public class MagicBurst : MonoBehaviour
     IEnumerator MagicBurstCoroutine()
     {
 
-        Debug.Log("A");
-        Debug.Log("B");
-        yield return new WaitForSeconds(3f);
-
-        Debug.Log("C");
-        yield return new WaitForSeconds(3f);
+        Debug.Log("A (Waiting for Projectile to finish)");
+        yield return new WaitForSeconds(2f);
+        Debug.Log("B (Projectile has finished lerping)");
+        Debug.Log("C (Start new Particle Explosion)");
+        Debug.Log("Play Explosion Sound");
+        yield return new WaitForSeconds(2f);
        
-        Debug.Log("my coroutine is finished");
+        Debug.Log("D Start Specific Interactions");
         // Woot Woot Say Da Whooot
-
+        //Object Specific Interactiions
         if (GetComponent<InteractableObject>().isMushroom == true)
         {
             //m.material.SetColor("_BaseColor", Random.ColorHSV());
@@ -49,12 +49,24 @@ public class MagicBurst : MonoBehaviour
         else if (GetComponent<InteractableObject>().isTree == true)
         {
             GetComponent<InteractableObject>().magicTree = true;
+            Debug.Log("Play Particle System With Gravity enabled to show motion");
+            yield return new WaitForSeconds(2f);
+            Debug.Log("Stop Particle Systme");
         }
 
         else if (GetComponent<InteractableObject>().isRock == true)
         {
             GetComponent<InteractableObject>().magicRock = true;
+            
         }
+
+        else if (GetComponent<InteractableObject>().isFlower == true)
+        {
+            GetComponent<InteractableObject>().flowerJump();
+            Debug.Log("Start Gravity Particle Effect");
+            Debug.Log("Play Sound for Flower");
+        }
+
         Debug.Log("WOOOT");
 
         /*else if (isWater == true)
@@ -65,13 +77,9 @@ public class MagicBurst : MonoBehaviour
                 Instantiate(water, theLocation, Quaternion.identity);
             }
         }
-
-        /*else if (isFlower == true)
-        {
-            r.AddForce(Vector3.up * jumpHeight);
-            Debug.Log("im flying");
-        }
-
+        */
+       
+        /*
         else if (isOak == true)
         {
             transform.localScale += new Vector3(0, 1, 0);
