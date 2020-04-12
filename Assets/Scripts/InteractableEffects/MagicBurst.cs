@@ -9,7 +9,6 @@ public class MagicBurst : MonoBehaviour
     public AudioClip audioClip;
     public ParticleSystem particlesSystem;
 
-
     public bool IsPlaying
     {
         get => _isPlaying;
@@ -31,11 +30,11 @@ public class MagicBurst : MonoBehaviour
     {
 
         Debug.Log("A (Waiting for Projectile to finish)");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         Debug.Log("B (Projectile has finished lerping)");
         Debug.Log("C (Start new Particle Explosion)");
         Debug.Log("Play Explosion Sound");
-        yield return new WaitForSeconds(2f);
+        //yield return new WaitForSeconds(1f);
        
         Debug.Log("D Start Specific Interactions");
         // Woot Woot Say Da Whooot
