@@ -105,7 +105,9 @@ public class HandController : MonoBehaviour
         {  
             if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
             {
-                shootParticleSys?.Play();
+                //shootParticleSys?.Play();
+                GameObject newProj;
+                newProj = Instantiate(magicProjectile, magicspawnLocation.transform.position, Quaternion.identity);
                 objectSlot?.GetComponent<InteractableObject>()?.magicHappens();
             }
         }
