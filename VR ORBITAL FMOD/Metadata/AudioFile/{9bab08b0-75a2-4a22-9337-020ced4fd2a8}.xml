@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{9bab08b0-75a2-4a22-9337-020ced4fd2a8}">
+		<property name="assetPath">
+			<value>Brook.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{043296f2-d514-4e40-8302-73ca5f8d502f}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{c4fd12a1-9af5-4bf5-ae16-445b3daa326c}">
+		<property name="assetPath">
+			<value>FF6.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.33866666666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{043296f2-d514-4e40-8302-73ca5f8d502f}</destination>
+		</relationship>
+	</object>
+</objects>
