@@ -22,6 +22,8 @@ namespace AI
         private float _distToGround = 0.5f;
         
         public AudioSource audioSource;
+
+        public bool playFootStepSounds = false;
         //public AudioClip movingSound;
 
         private void Awake()
@@ -50,7 +52,7 @@ namespace AI
                 return;
             
             // HACKY
-            if (_charController.velocity.magnitude > 0.1)
+            if (_charController.velocity.magnitude > 0.1 && playFootStepSounds)
             {
                 if(!audioSource.isPlaying)
                     audioSource.Play();

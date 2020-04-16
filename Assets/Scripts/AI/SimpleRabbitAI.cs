@@ -99,7 +99,8 @@ namespace AI
             {
                 if (scaredOfTags?.Contains(hit.collider.tag) ?? false)
                 {
-                    
+                    currentState = AIState.RunAway;
+                    // TODO Store ref to obj R' is scared of
                 }
             }
         }
@@ -200,6 +201,10 @@ namespace AI
         private void DoRunAwayState()
         {
             throw new System.NotImplementedException();
+            // TODO Pick a place to run to (Away from P')
+            // TODO Need a timer or keep track of distance & if certain threshold exceeded stop running
+            if (1 == 1)
+                currentState = AIState.HopAround;
         }
 
         /*private void RotateToTarget()
