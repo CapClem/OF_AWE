@@ -22,14 +22,18 @@ public class PlayerSoundController : MonoBehaviour
 
     //private FirstPersonAIO fpAIO;
     private Rigidbody _rb;
+    private CharacterController _characterController;
     private bool _hasRb;
+    private bool _hasCharContr;
     
     void Start()
     {
         //fpAIO = GetComponent<FirstPersonAIO>();
         _rb = GetComponent<Rigidbody>();
+        _characterController = GetComponent<CharacterController>();
         _hasRb = _rb != null;
-        
+        _hasCharContr = _characterController != null;
+
     }
 
     // Update is called once per frame
@@ -42,21 +46,38 @@ public class PlayerSoundController : MonoBehaviour
         {
             if (_isInWater && waterFootstepEvent != "")
             {
-                FMODUnity.RuntimeManager.PlayOneShot(waterFootstepEvent, _rb.transform.position);
+                FMODUnity.RuntimeManager.PlayOneShot(waterFootstepEvent, transform.position);
             }else if (forestFootstepEvent != "")
             {
-                FMODUnity.RuntimeManager.PlayOneShot(forestFootstepEvent, _rb.transform.position);
+                FMODUnity.RuntimeManager.PlayOneShot(forestFootstepEvent, transform.position);
             }
 
-            _walkSoundCountdown = walkSoundCooldownVelocityCurve.Evaluate((new Vector2(_rb.velocity.x, _rb.velocity.z)).magnitude);//walkSoundCooldown;
+            _walkSoundCountdown = walkSoundCooldownVelocityCurve.Evaluate(GetCurrentVelocityMagnitude());//walkSoundCooldown;
         }
+    }
+
+    public float GetCurrentVelocityMagnitude()
+    {
+        var vec2Velocity = new Vector2(0,0);
+
+        if (_hasCharContr)
+        {
+            vec2Velocity.x = _characterController.velocity.x;
+            vec2Velocity.y = _characterController.velocity.z;
+        }else if (_hasRb)
+        {
+            vec2Velocity.x = _rb.velocity.x;
+            vec2Velocity.y = _rb.velocity.z;
+        }
+        
+        return vec2Velocity.magnitude;
     }
 
     public bool IsWalking()
     {
         if (!_hasRb) return false;
 
-        return /*fpAIO.IsGrounded && */(new Vector2(_rb.velocity.x, _rb.velocity.z)).magnitude >= walkVelocityThreshold;
+        return /*fpAIO.IsGrounded && */GetCurrentVelocityMagnitude() >= walkVelocityThreshold;
     }
 
     private void OnCollisionEnter(Collision other)
