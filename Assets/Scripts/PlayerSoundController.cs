@@ -17,7 +17,7 @@ public class PlayerSoundController : MonoBehaviour
     
     //public float walkSoundCooldown = 0.5f; // A walking clip can only be played every [walkSoundCooldown] seconds
     public AnimationCurve walkSoundCooldownVelocityCurve;
-    [SerializeField]
+    
     private float _walkSoundCountdown = 0;
 
     //private FirstPersonAIO fpAIO;
@@ -35,8 +35,6 @@ public class PlayerSoundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IsWalking())
-            Debug.Log((new Vector2(_rb.velocity.x, _rb.velocity.z)).magnitude);
         if (_walkSoundCountdown > 0)
             _walkSoundCountdown -= Time.deltaTime;
         
