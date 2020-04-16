@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{6b85d51f-83d6-49dd-92e6-216e81c34c5b}">
+		<property name="name">
+			<value>Brook Distance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{464ab4c0-e926-44d6-bff9-698efad84af1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1af5c1d3-b185-4b0c-952d-a76064176d28}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1af5c1d3-b185-4b0c-952d-a76064176d28}">
+		<property name="parameterType">
+			<value>3</value>
+		</property>
+		<property name="maximum">
+			<value>50</value>
+		</property>
+		<property name="isHeld">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
