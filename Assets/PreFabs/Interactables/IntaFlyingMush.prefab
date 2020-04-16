@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2759322919604955160}
   - component: {fileID: 1157508991458433548}
   - component: {fileID: 1157508991458433549}
-  - component: {fileID: 1157508991458433546}
   - component: {fileID: 1157508991458433551}
   - component: {fileID: 1157508991458433550}
   - component: {fileID: -3290972183610681422}
@@ -99,22 +98,6 @@ MonoBehaviour:
   duration: 5
   magicTree: 0
   interactableEffect: {fileID: 0}
---- !u!114 &1157508991458433546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157508991458433547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9448e8d0886ce2344a3003fbd9895cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  helpText: {fileID: 0}
-  tooltipText: {fileID: 0}
-  helpString: Mushroom
-  tooltipString: Pie
 --- !u!65 &1157508991458433551
 BoxCollider:
   m_ObjectHideFlags: 0

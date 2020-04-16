@@ -31,9 +31,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5714023230549820451}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.82, y: -0.21, z: 4.85}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
   particlesSystem: {fileID: 0}
+  fallingLeaves: {fileID: 0}
 --- !u!114 &5714023230549820462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,13 +114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMushroom: 0
   isTree: 0
-  isOak: 0
-  isWillow: 0
-  isWater: 0
   isFlower: 0
-  isPine: 0
   isRock: 1
-  water: {fileID: 0}
+  isDuplication: 0
+  duplicationObject: {fileID: 0}
   m: {fileID: 0}
   mushTop: {fileID: 0}
   magicMush: 0
@@ -171,8 +169,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25175753, y: 0.18922184, z: 0.22625959}
-  m_Center: {x: -0.010439953, y: 0.09231374, z: 0.014330952}
+  m_Size: {x: 0.09296932, y: 0.2761917, z: 0.094131604}
+  m_Center: {x: -0.005370388, y: -0.078384474, z: 0.0064651393}
 --- !u!65 &5714023230549820463
 BoxCollider:
   m_ObjectHideFlags: 0

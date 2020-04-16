@@ -8,17 +8,14 @@ public class InteractableObject : MonoBehaviour
     [Header("Type Settings")]
     public bool isMushroom;
     public bool isTree;
-    public bool isOak;
-    public bool isWillow;
-    public bool isWater;
     public bool isFlower;
-    public bool isPine;
     public bool isRock;
+    public bool isDuplication;
     
 
     //Water/Dupe
-    [Header("Water/Duplication Settings")]
-    public GameObject water;
+    [Header("Duplication Settings")]
+    public GameObject duplicationObject;
     private Vector3 theLocation;
 
     //Mushrooms
@@ -97,11 +94,10 @@ public class InteractableObject : MonoBehaviour
          if (interactableEffect == null)
              interactableEffect = GetComponent<MagicBurst>();
     
-        //Water/DupeStart
-        if (isWater == true)
+        //DupeStart
+        if (isDuplication == true)
         {
-            water = gameObject;
-            //r.AddForce(Vector3.up * jumpHeight);
+            duplicationObject = gameObject;
         }
      }
      
@@ -115,7 +111,7 @@ public class InteractableObject : MonoBehaviour
 
 
 
-        //BirchStuff
+        //TreeStuff
         if (magicTree == true)
         {
 

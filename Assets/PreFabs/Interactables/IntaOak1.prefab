@@ -990,7 +990,6 @@ GameObject:
   - component: {fileID: 9071311910054408969}
   - component: {fileID: 9071311910054408968}
   - component: {fileID: 9071311910054408967}
-  - component: {fileID: 9071311910054408966}
   - component: {fileID: 1192296755182531399}
   m_Layer: 0
   m_Name: IntaOak1
@@ -1006,15 +1005,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9071311910054408965}
-  m_LocalRotation: {x: 0, y: -0.3335192, z: -0, w: 0.9427433}
+  m_LocalRotation: {x: 0, y: -0.33351883, z: 0, w: 0.9427435}
   m_LocalPosition: {x: -14.76, y: -1.0500001, z: 6.54}
-  m_LocalScale: {x: 0.9113438, y: 0.87842417, z: 0.9113438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2434899195335440039}
   - {fileID: 4660653949604251295}
+  - {fileID: 8140806729604292846}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -38.965, z: 0}
 --- !u!136 &9071311910054408970
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1104,14 +1104,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMushroom: 0
-  isTree: 0
-  isOak: 1
-  isWillow: 0
-  isWater: 0
+  isTree: 1
   isFlower: 0
-  isPine: 0
   isRock: 0
-  water: {fileID: 0}
+  isDuplication: 0
+  duplicationObject: {fileID: 0}
   m: {fileID: 0}
   mushTop: {fileID: 0}
   magicMush: 0
@@ -1128,27 +1125,11 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   distance: 0
-  maxScale: {x: 0, y: 0, z: 0}
+  maxScale: {x: 2, y: 2, z: 2}
   speed: 2
   duration: 5
   magicTree: 0
   interactableEffect: {fileID: 0}
---- !u!114 &9071311910054408966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071311910054408965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9448e8d0886ce2344a3003fbd9895cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  helpText: {fileID: 0}
-  tooltipText: {fileID: 0}
-  helpString: I AM PROFESSOR OAK
-  tooltipString: I like you more than my grandson
 --- !u!114 &1192296755182531399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,3 +1145,85 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
   particlesSystem: {fileID: 0}
+  fallingLeaves: {fileID: 8140806729604292845}
+--- !u!1001 &694298575806647413
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5456286621882564886}
+    m_Modifications:
+    - target: {fileID: 8744671573437295766, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_Name
+      value: Falling Leaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9, type: 3}
+--- !u!4 &8140806729604292846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 694298575806647413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8140806729604292845 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 694298575806647413}
+  m_PrefabAsset: {fileID: 0}

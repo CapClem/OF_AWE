@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 18566595025715592}
   - component: {fileID: 3898621806913041286}
   - component: {fileID: 3898621806913041285}
-  - component: {fileID: 3898621806913041284}
   - component: {fileID: 3898621806913041287}
   - component: {fileID: -3631535996945341072}
   m_Layer: 0
@@ -184,7 +183,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3898621806913041307}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.63, y: -1.0500001, z: 12.08}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
@@ -234,7 +233,7 @@ MonoBehaviour:
   isRock: 0
   water: {fileID: 0}
   m: {fileID: 0}
-  mushTop: {fileID: 625433062153432384, guid: d80240a6f500281409b40a0cb0ff6367, type: 3}
+  mushTop: {fileID: 3391981637140769939}
   magicMush: 0
   matA: {fileID: 0}
   matB: {fileID: 2100000, guid: 9bbd89fb5798bbc429589d5af0fdbd72, type: 2}
@@ -254,22 +253,6 @@ MonoBehaviour:
   duration: 5
   magicTree: 0
   interactableEffect: {fileID: 0}
---- !u!114 &3898621806913041284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3898621806913041307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9448e8d0886ce2344a3003fbd9895cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  helpText: {fileID: 0}
-  tooltipText: {fileID: 0}
-  helpString: 
-  tooltipString: 
 --- !u!65 &3898621806913041287
 BoxCollider:
   m_ObjectHideFlags: 0

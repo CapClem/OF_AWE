@@ -8,6 +8,7 @@ public class MagicBurst : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audioClip;
     public ParticleSystem particlesSystem;
+    public ParticleSystem fallingLeaves;
 
     public bool IsPlaying
     {
@@ -49,6 +50,7 @@ public class MagicBurst : MonoBehaviour
         {
             GetComponent<InteractableObject>().magicTree = true;
             Debug.Log("Play Particle System With Gravity enabled to show motion");
+            fallingLeaves.Play();
             yield return new WaitForSeconds(2f);
             Debug.Log("Stop Particle Systme");
         }

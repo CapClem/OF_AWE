@@ -1615,7 +1615,6 @@ GameObject:
   - component: {fileID: 8791691554633786122}
   - component: {fileID: 8791691554633786229}
   - component: {fileID: 8791691554633786228}
-  - component: {fileID: 8791691554633786231}
   - component: {fileID: 8791691554633786123}
   - component: {fileID: -6646212425124799014}
   m_Layer: 0
@@ -1714,22 +1713,6 @@ MonoBehaviour:
   starredPowerObject: {fileID: 0}
   activeGazeTime: 0
   activeGazeMagicGained: 0
---- !u!114 &8791691554633786231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8791691554633786230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9448e8d0886ce2344a3003fbd9895cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  helpText: {fileID: 0}
-  tooltipText: {fileID: 0}
-  helpString: 
-  tooltipString: 
 --- !u!54 &8791691554633786123
 Rigidbody:
   m_ObjectHideFlags: 0

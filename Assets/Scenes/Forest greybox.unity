@@ -14331,15 +14331,20 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8473415801475291036, guid: a065f7ad14846e647a620873320f5eac,
+    - target: {fileID: 7014862826235545388, guid: a065f7ad14846e647a620873320f5eac,
         type: 3}
-      propertyPath: m_Enabled
+      propertyPath: useProfileData
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8480927627908857489, guid: a065f7ad14846e647a620873320f5eac,
         type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473415801475291036, guid: a065f7ad14846e647a620873320f5eac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a065f7ad14846e647a620873320f5eac, type: 3}

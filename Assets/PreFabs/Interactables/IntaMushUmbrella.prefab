@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9bbd89fb5798bbc429589d5af0fdbd72, type: 2}
+  - {fileID: 8839812350769563644, guid: 0098f9f40fcba344e95d31b7b956163b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 1133598252404433003}
   - component: {fileID: 4170333539201913471}
   - component: {fileID: 4170333539201913470}
-  - component: {fileID: 4170333539201913465}
   - component: {fileID: 4170333539201913468}
   - component: {fileID: -5862435786124579538}
   m_Layer: 0
@@ -184,7 +183,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4170333539201913464}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.97, y: -1.0500001, z: 12.25}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
@@ -236,7 +235,7 @@ MonoBehaviour:
   m: {fileID: 0}
   mushTop: {fileID: 625433062153432384}
   magicMush: 0
-  matA: {fileID: 0}
+  matA: {fileID: 8839812350769563644, guid: 0098f9f40fcba344e95d31b7b956163b, type: 3}
   matB: {fileID: 2100000, guid: 9bbd89fb5798bbc429589d5af0fdbd72, type: 2}
   jumpHeight: 0
   r: {fileID: 0}
@@ -254,22 +253,6 @@ MonoBehaviour:
   duration: 5
   magicTree: 0
   interactableEffect: {fileID: 0}
---- !u!114 &4170333539201913465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4170333539201913464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9448e8d0886ce2344a3003fbd9895cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  helpText: {fileID: 0}
-  tooltipText: {fileID: 0}
-  helpString: Mushroom
-  tooltipString: Pie
 --- !u!65 &4170333539201913468
 BoxCollider:
   m_ObjectHideFlags: 0
