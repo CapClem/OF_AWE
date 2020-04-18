@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 2875574640882250267}
   - component: {fileID: 2875574640882250266}
   - component: {fileID: 2875574640882250265}
+  - component: {fileID: 6830074233893280092}
   m_Layer: 0
-  m_Name: IntaFlowerNEWWORKSYES
+  m_Name: NewIntaFlower
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2875574640882250264}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 87.49, y: -1.0500001, z: 6.32}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,7 +94,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2875574640882250264}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4124055, y: 0.45219097, z: 0.41240555}
@@ -152,6 +153,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
   particlesSystem: {fileID: 0}
+  fallingLeaves: {fileID: 0}
 --- !u!54 &2875574640882250265
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,3 +170,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6830074233893280092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875574640882250264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06889041, y: 0.45219097, z: 0.06867657}
+  m_Center: {x: 0.00061186403, y: 0.22609548, z: -0.0066053392}

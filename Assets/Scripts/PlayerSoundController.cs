@@ -7,8 +7,16 @@ public class PlayerSoundController : MonoBehaviour
     public string forestFootstepEvent = "";
     [FMODUnity.EventRef]
     public string waterFootstepEvent = "";
+    [FMODUnity.EventRef]
+    public string musicBGM = "";
+    public FMOD.Studio.EventInstance Music;
 
 
+
+    [FMODUnity.EventRef]
+    public string windEvent = "";
+
+    public GameObject Player;
     public string waterTag = "Water";
     private bool _isInWater = false;
 
@@ -28,6 +36,11 @@ public class PlayerSoundController : MonoBehaviour
     
     void Start()
     {
+        FMODUnity.RuntimeManager.PlayOneShotAttached(musicBGM, Player);
+        //Music = FMODUnity.RuntimeManager.CreateInstance(musicBGM);
+        //Music.start();
+        //Music.setParameterByName("Music Section", 1f);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(windEvent, Player);
         //fpAIO = GetComponent<FirstPersonAIO>();
         _rb = GetComponent<Rigidbody>();
         _characterController = GetComponent<CharacterController>();

@@ -10363,6 +10363,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestFootstepEvent: event:/FOREST FOOTSTEPS
   waterFootstepEvent: event:/WATER FOOTSTEPS
+  musicBGM: event:/BGM
+  windEvent: event:/WIND
+  Player: {fileID: 8020729791297634911}
   waterTag: Water
   walkVelocityThreshold: 0.5
   walkSoundCooldownVelocityCurve:

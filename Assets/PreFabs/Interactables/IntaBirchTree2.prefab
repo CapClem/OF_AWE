@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8211103536907623227}
   - component: {fileID: 8211103536907623226}
   - component: {fileID: 2774980200578969097}
+  - component: {fileID: 125292361850331677}
   m_Layer: 0
   m_Name: IntaBirchTree2
   m_TagString: Interactable
@@ -224,7 +225,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8211103536907623229}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5022689
   m_Height: 8.506953
@@ -246,6 +247,19 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   particlesSystem: {fileID: 0}
   fallingLeaves: {fileID: 8921948907039727927}
+--- !u!65 &125292361850331677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211103536907623229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.556726, y: 8.589548, z: 0.5291519}
+  m_Center: {x: -0.089462996, y: 4.294774, z: -0.011377335}
 --- !u!1001 &183083204363029935
 PrefabInstance:
   m_ObjectHideFlags: 0

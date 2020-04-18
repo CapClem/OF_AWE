@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5420703967801318062}
   - component: {fileID: 5714023230549820462}
   - component: {fileID: 5714023230549820449}
-  - component: {fileID: 5714023230549820448}
   - component: {fileID: 5714023230549820463}
   - component: {fileID: -1680902387815109013}
   m_Layer: 0
@@ -158,19 +157,6 @@ MonoBehaviour:
   starredPowerObject: {fileID: 0}
   activeGazeTime: 0
   activeGazeMagicGained: 0
---- !u!65 &5714023230549820448
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5714023230549820451}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09296932, y: 0.2761917, z: 0.094131604}
-  m_Center: {x: -0.005370388, y: -0.078384474, z: 0.0064651393}
 --- !u!65 &5714023230549820463
 BoxCollider:
   m_ObjectHideFlags: 0
