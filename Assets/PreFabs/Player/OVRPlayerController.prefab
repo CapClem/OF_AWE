@@ -10235,7 +10235,7 @@ GameObject:
   - component: {fileID: 4460189491539182465}
   - component: {fileID: 49873152444003451}
   - component: {fileID: 4360424882016540873}
-  - component: {fileID: 8480927627908857489}
+  - component: {fileID: 3576033185052941829}
   m_Layer: 0
   m_Name: OVRPlayerController
   m_TagString: Player
@@ -10292,7 +10292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.8
+  Acceleration: 0.2
   Damping: 0.3
   BackAndSideDampen: 0.5
   JumpForce: 0.3
@@ -10303,7 +10303,7 @@ MonoBehaviour:
   HmdResetsY: 1
   HmdRotatesY: 1
   GravityModifier: 1
-  useProfileData: 1
+  useProfileData: 0
   EnableLinearMovement: 1
   EnableRotation: 1
   RotationEitherThumbstick: 0
@@ -10416,7 +10416,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!54 &8480927627908857489
+--- !u!54 &3576033185052941829
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10430,7 +10430,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &8024809261248850452
 GameObject:
