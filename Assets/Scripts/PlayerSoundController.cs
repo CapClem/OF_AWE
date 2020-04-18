@@ -33,14 +33,34 @@ public class PlayerSoundController : MonoBehaviour
     private CharacterController _characterController;
     private bool _hasRb;
     private bool _hasCharContr;
+
+    // TODO !!!! @Phil Only used if you want to change a parameter by Id instead of its name
+    // private FMOD.Studio.PARAMETER_ID musicBGMParameterId;
     
     void Start()
     {
-        FMODUnity.RuntimeManager.PlayOneShotAttached(musicBGM, Player);
-        //Music = FMODUnity.RuntimeManager.CreateInstance(musicBGM);
-        //Music.start();
-        //Music.setParameterByName("Music Section", 1f);
+        //FMODUnity.RuntimeManager.PlayOneShotAttached(musicBGM, Player);
+        Music = FMODUnity.RuntimeManager.CreateInstance(musicBGM);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(Music, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        Music.start();
+        Music.setParameterByName("Music Section", 1f);
+        
+        /*
+         // TODO !!!! @Phil 
+         // INFO: Following code gets & stores the ID of the "Music Section" parameter.
+         // You can then change the parameter with Music.setParameterByID(musicBGMParameterId, 1f); instead of byName
+         // The only difference between setParameterById and ByName is that ById is much more efficient
+         // and recommended to use if you're changing the parameter A LOT - for example in every Update()-call
+        FMOD.Studio.EventDescription musicBGMEventDescription;
+        Music.getDescription(out musicBGMEventDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION musicBGMParameterDescription;
+        musicBGMEventDescription.getParameterDescriptionByName("Music Section", out musicBGMParameterDescription);
+        musicBGMParameterId = musicBGMParameterDescription.id;
+        */
+        
+        
         FMODUnity.RuntimeManager.PlayOneShotAttached(windEvent, Player);
+        
         //fpAIO = GetComponent<FirstPersonAIO>();
         _rb = GetComponent<Rigidbody>();
         _characterController = GetComponent<CharacterController>();
@@ -48,6 +68,8 @@ public class PlayerSoundController : MonoBehaviour
         _hasCharContr = _characterController != null;
 
     }
+    
+    
 
     // Update is called once per frame
     void Update()
