@@ -2,177 +2,28 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20008 (108014), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 3, input speaker mode 6
 [LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-<<<<<<< Updated upstream
-[LOG] AsyncManager::init                       : manager 000002531D1B9858 isAsync 0 updatePeriod 0.02
-=======
-[LOG] AsyncManager::init                       : manager 000001E0B394A718 isAsync 0 updatePeriod 0.02
->>>>>>> Stashed changes
+[LOG] AsyncManager::init                       : manager 000001F7F34C3928 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] SystemI::createSound                     : filename = Assets\VR ORBITAL FMOD\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001E091E4D388 : node = 000001E0B32CB750
-[LOG] SystemI::createSound                     : add node to async list : head = 000001E0B2F7B8C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E091E4D388
-[LOG] SystemI::createSoundInternal             :     Create name='Assets\VR ORBITAL FMOD\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21068224
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15104
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E0B32CB860
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wind', format=2, channels=2, frequency=48000, lengthbytes=655648, lengthpcm=2934424, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.008508.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E091E4D388
-[LOG] SoundI::getSubSound                      : sound 000001E091E4D388.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Wind (000001E09EA62C78)
-[LOG] SoundI::release                          :     Wind (000001E0B2F7BDF8)
-[LOG] SoundI::release                          :     Wind (000001E099238138)
-[LOG] SoundI::release                          : Orbital Fish OST2 Awe (INTRO) (000001E090858C38)
-[LOG] SoundI::release                          :     Orbital Fish OST2 Awe (INTRO) (000001E0B2F7D998)
-[LOG] SoundI::release                          :     Orbital Fish OST2 Awe (INTRO) (000001E090858218)
-[LOG] SoundI::release                          : Wind (000001E091E4D388)
-[LOG] SoundI::release                          :     Wind (000001E0B3306CB8)
-[LOG] SoundI::release                          :     Wind (000001E090858728)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-<<<<<<< Updated upstream
-[WRN] OutputWASAPI::mixerThread                : Starvation detected in WASAPI output buffer!
-=======
-[LOG] SystemI::createSound                     : filename = Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001E099238138 : node = 000001E08D944C70
-[LOG] SystemI::createSound                     : add node to async list : head = 000001E0B2F7B8C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E099238138
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21068224
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15104
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E08D944D80
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Orbital Fish OST1 Calm', format=2, channels=2, frequency=48000, lengthbytes=8363456, lengthpcm=8302936, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.364685.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E099238138
-[LOG] SoundI::getSubSound                      : sound 000001E099238138.  Subsound index 0 / 1
-[LOG] SystemI::createSound                     : filename = Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001E098F87698 : node = 000001E08D9444F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001E0B2F7B8C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E098F87698
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21068224
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15104
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E08D944600
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Orbital Fish OST2 Awe (INTRO)', format=2, channels=2, frequency=48000, lengthbytes=3197056, lengthpcm=3101539, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.319305.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E098F87698
-[LOG] SoundI::getSubSound                      : sound 000001E098F87698.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E098F87848
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E098F87848
-[LOG] SoundI::release                          : Orbital Fish OST1 Calm (000001E099238138)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E0B33089F8)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E098F87338)
-[LOG] SystemI::createSound                     : filename = Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001E098F87338 : node = 000001E0B3AE5330
-[LOG] SystemI::createSound                     : add node to async list : head = 000001E0B2F7B8C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E098F87338
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21068224
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15104
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E0B3AE5440
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Orbital Fish OST1 Calm', format=2, channels=2, frequency=48000, lengthbytes=8363456, lengthpcm=8302936, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.364685.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E098F87338
-[LOG] SoundI::getSubSound                      : sound 000001E098F87338.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Orbital Fish OST2 Awe (INTRO) (000001E098F87698)
-[LOG] SoundI::release                          :     Orbital Fish OST2 Awe (INTRO) (000001E0B3305C78)
-[LOG] SoundI::release                          :     Orbital Fish OST2 Awe (INTRO) (000001E098F87848)
-[LOG] SystemI::createSound                     : filename = Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001E098F87698 : node = 000001E0B3AE5970
-[LOG] SystemI::createSound                     : add node to async list : head = 000001E0B2F7B8C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E098F87698
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21068224
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15104
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E0B3AE5A80
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Orbital Fish OST1 Calm', format=2, channels=2, frequency=48000, lengthbytes=8363456, lengthpcm=8302936, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.364685.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E098F87698
-[LOG] SoundI::getSubSound                      : sound 000001E098F87698.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Orbital Fish OST1 Calm (000001E098F87338)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E0B3307CF8)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E098F879F8)
-[LOG] SystemI::createSound                     : filename = Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001E098F87338 : node = 000001E09F37B960
-[LOG] SystemI::createSound                     : add node to async list : head = 000001E0B2F7B8C8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E098F87338
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 21068224
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15104
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E09F37BA70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Orbital Fish OST1 Calm', format=2, channels=2, frequency=48000, lengthbytes=8363456, lengthpcm=8302936, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.364685.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E098F87338
-[LOG] SoundI::getSubSound                      : sound 000001E098F87338.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Orbital Fish OST1 Calm (000001E098F87698)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E0B3306158)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E098F87848)
-[LOG] SoundI::release                          : Orbital Fish OST1 Calm (000001E098F87338)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E0B3307198)
-[LOG] SoundI::release                          :     Orbital Fish OST1 Calm (000001E098F879F8)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
->>>>>>> Stashed changes
