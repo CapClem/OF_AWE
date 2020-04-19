@@ -263,6 +263,161 @@ PrefabInstance:
       propertyPath: moveWithTransform
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.r
+      value: 0.55674285
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.g
+      value: 0.99899304
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.b
+      value: 0.15359834
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 6168
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime2
+      value: 11758
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 40092
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.g
+      value: 0.98507845
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key3.b
+      value: 0.10849059
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime3
+      value: 31418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime0
+      value: 1735
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key4.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key4.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key4.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime4
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key5.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key5.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key5.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759716468027562471, guid: c745a649570b42b4080741c2d11b9e88,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime5
+      value: 65535
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c745a649570b42b4080741c2d11b9e88, type: 3}
 --- !u!4 &7356152507496981747 stripped

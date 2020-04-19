@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     private void HandlePowerReceived()
     {
         HasMagic = true;
+        GetComponent<PlayerSoundController>().BGMchange();
     }
 
     // Update is called once per frame
