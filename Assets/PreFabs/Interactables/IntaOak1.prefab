@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &519679264291355126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361728467194060351}
+  m_Layer: 0
+  m_Name: Plane Transform 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1361728467194060351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519679264291355126}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0, z: 9.71}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 8140806729604292846}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &702807002176508587
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,11 +1016,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5456286621882564886}
-  - component: {fileID: 9071311910054408970}
-  - component: {fileID: 9071311910054408969}
-  - component: {fileID: 9071311910054408968}
   - component: {fileID: 9071311910054408967}
   - component: {fileID: 1192296755182531399}
+  - component: {fileID: 927183435617113996}
   m_Layer: 0
   m_Name: IntaOak1
   m_TagString: Interactable
@@ -1015,82 +1043,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -38.965, z: 0}
---- !u!136 &9071311910054408970
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071311910054408965}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 3.4719636
-  m_Height: 14.13259
-  m_Direction: 1
-  m_Center: {x: 0.000004193338, y: 6.5475535, z: -0.3090947}
---- !u!114 &9071311910054408969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071311910054408965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 9071311910054408968}
-          m_MethodName: GazeEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 9071311910054408968}
-          m_MethodName: GazeExit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &9071311910054408968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071311910054408965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77398644dd2433945b73c01e0bf3cd25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPowerChargeTime: 10
-  playerPowerChannelingAnimTarget: {fileID: 0}
-  playerPowerTransmissionAnimTarget: {fileID: 0}
-  gazeActive: 0
-  starredPowerObject: {fileID: 0}
-  activeGazeTime: 0
-  activeGazeMagicGained: 0
 --- !u!114 &9071311910054408967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,6 +1098,19 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   particlesSystem: {fileID: 0}
   fallingLeaves: {fileID: 8140806729604292845}
+--- !u!65 &927183435617113996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071311910054408965}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2793703, y: 10.704546, z: 2.4246824}
+  m_Center: {x: 0.25956178, y: 4.852272, z: 0.14683403}
 --- !u!1001 &694298575806647413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1166,7 +1131,7 @@ PrefabInstance:
     - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.69
+      value: 9.93
       objectReference: {fileID: 0}
     - target: {fileID: 8744671573437295771, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
         type: 3}
@@ -1212,6 +1177,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: CollisionModule.plane0
+      value: 
+      objectReference: {fileID: 1361728467194060351}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9, type: 3}

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6372337024311505286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1292682282704630641}
+  m_Layer: 0
+  m_Name: Plane Transform 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1292682282704630641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372337024311505286}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0, z: 8.17}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 8921948907039727924}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8211103536907623229
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,6 +46,7 @@ GameObject:
   - component: {fileID: 8211103536907623227}
   - component: {fileID: 8211103536907623226}
   - component: {fileID: 2774980200578969097}
+  - component: {fileID: 125292361850331677}
   m_Layer: 0
   m_Name: IntaBirchTree2
   m_TagString: Interactable
@@ -194,7 +225,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8211103536907623229}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 1.5022689
   m_Height: 8.506953
@@ -216,6 +247,19 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   particlesSystem: {fileID: 0}
   fallingLeaves: {fileID: 8921948907039727927}
+--- !u!65 &125292361850331677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211103536907623229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.556726, y: 8.589548, z: 0.5291519}
+  m_Center: {x: -0.089462996, y: 4.294774, z: -0.011377335}
 --- !u!1001 &183083204363029935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,6 +326,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: CollisionModule.plane0
+      value: 
+      objectReference: {fileID: 1292682282704630641}
+    - target: {fileID: 8744671573437295768, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f023d1dbd6ed1ce4dbc400ad0c45f7f9, type: 3}

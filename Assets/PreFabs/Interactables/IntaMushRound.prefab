@@ -135,7 +135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8839812350769563644, guid: f6ace7c53dd9f59448036ee82b032669, type: 3}
+  - {fileID: 2100000, guid: 0b867240410d26a4c9bc5779ac2ffec0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -225,13 +225,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMushroom: 1
   isTree: 0
-  isOak: 0
-  isWillow: 0
-  isWater: 0
   isFlower: 0
-  isPine: 0
   isRock: 0
-  water: {fileID: 0}
+  isDuplication: 0
+  duplicationObject: {fileID: 0}
   m: {fileID: 0}
   mushTop: {fileID: 3391981637140769939}
   magicMush: 0
@@ -281,3 +278,4 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   audioClip: {fileID: 0}
   particlesSystem: {fileID: 0}
+  fallingLeaves: {fileID: 0}
