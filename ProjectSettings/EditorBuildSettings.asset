@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu Screen.unity
+    guid: 7f037b29cf5e7524d97dd6a94e0d3542
+  - enabled: 1
+    path: Assets/Scenes/Forest LEVEL Alternate.unity
+    guid: bad89e245759ce642983488c1d45c83d
   - enabled: 0
-    path: Assets/Scenes/PhilipTest2.unity
-    guid: 539d40df1e92d334292791a3dd56758e
+    path: Assets/Scenes/Forest greybox.unity
+    guid: 93f5b0cb914d7c942a1b2997b4904ab1
   - enabled: 0
     path: Assets/Scenes/OscarTest.unity
     guid: e795ad56837320a4a8a5f97219c1ca10
-  - enabled: 1
-    path: Assets/Scenes/Forest greybox.unity
-    guid: 93f5b0cb914d7c942a1b2997b4904ab1
+  - enabled: 0
+    path: Assets/Scenes/PhilipTest2.unity
+    guid: 539d40df1e92d334292791a3dd56758e
   m_configObjects: {}
