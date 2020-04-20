@@ -84,7 +84,7 @@ MonoBehaviour:
   Path: event:/FOREST FOOTSTEPS
   guid: f3a65599f98f764ea5f20995c879b0e2
   Banks:
-  - {fileID: 3932261008519456404}
+  - {fileID: -4380110129125950325}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -237,7 +237,7 @@ MonoBehaviour:
   Path: event:/WATER FOOTSTEPS
   guid: 698f1b4eeda5a44984cb4332bf0387b6
   Banks:
-  - {fileID: 3932261008519456404}
+  - {fileID: -4380110129125950325}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -346,6 +346,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-4380110129125950325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637228143280177097
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-3868921492146130505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,6 +438,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-2911753352715966088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Music Section
+  m_EditorClassIdentifier: 
+  Name: Music Section
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-2731433344989535706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +528,7 @@ MonoBehaviour:
   Path: event:/WIND
   guid: 9187b6bf93d14d4281382559376df853
   Banks:
-  - {fileID: 3932261008519456404}
+  - {fileID: -4380110129125950325}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -533,12 +568,12 @@ MonoBehaviour:
   Path: event:/BGM
   guid: 8b55cb8aa4b5ad46844d4fece6374646
   Banks:
-  - {fileID: 3932261008519456404}
+  - {fileID: -4380110129125950325}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8100622911240448006}
+  - {fileID: -2911753352715966088}
   MinDistance: 5.6
   MaxDistance: 84.5
   Length: 343076
@@ -556,7 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 3180589491755376617}
-  - {fileID: 3932261008519456404}
+  - {fileID: -4380110129125950325}
   EditorEvents:
   - {fileID: -6087852069240526804}
   - {fileID: -179630951189876253}
@@ -565,10 +600,10 @@ MonoBehaviour:
   - {fileID: -1239865188552744155}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3932261008519456404}
+  - {fileID: -4380110129125950325}
   StringsBanks:
   - {fileID: 3180589491755376617}
-  stringsBankWriteTime: 637226813653984319
+  stringsBankWriteTime: 637226908664086327
   cacheVersion: 3
 --- !u!114 &26925983204560982
 MonoBehaviour:
@@ -605,7 +640,7 @@ MonoBehaviour:
   Path: event:/BROOK
   guid: 4fe3e5848219bd43a30185d75e74dcc9
   Banks:
-  - {fileID: 3932261008519456404}
+  - {fileID: -4380110129125950325}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -723,7 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/VR ORBITAL FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637226813653984319
+  lastModified: 637226908664086327
   LoadResult: 0
   FileSizes:
   - Name: 
