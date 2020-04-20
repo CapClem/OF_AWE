@@ -52,6 +52,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-8800472399288011658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WILDLIFE
+  m_EditorClassIdentifier: 
+  Path: event:/WILDLIFE
+  guid: 1d21b8bde5c08548a8285e40e44b52bd
+  Banks:
+  - {fileID: 3414064844720094957}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 120000
 --- !u!114 &-8683817914565705296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +124,7 @@ MonoBehaviour:
   Path: event:/FOREST FOOTSTEPS
   guid: f3a65599f98f764ea5f20995c879b0e2
   Banks:
-  - {fileID: -2108116415329067477}
+  - {fileID: 3414064844720094957}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -222,6 +245,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 986
   Exists: 1
+--- !u!114 &-6975231871566342088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WIND HEAVY
+  m_EditorClassIdentifier: 
+  Path: event:/WIND HEAVY
+  guid: b581ffc557ccd746847b4820575e0b84
+  Banks:
+  - {fileID: 3414064844720094957}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 120000
 --- !u!114 &-6868939043738317081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +300,7 @@ MonoBehaviour:
   Path: event:/WATER FOOTSTEPS
   guid: 698f1b4eeda5a44984cb4332bf0387b6
   Banks:
-  - {fileID: -2108116415329067477}
+  - {fileID: 3414064844720094957}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -563,7 +609,7 @@ MonoBehaviour:
   Path: event:/WIND
   guid: 9187b6bf93d14d4281382559376df853
   Banks:
-  - {fileID: -2108116415329067477}
+  - {fileID: 3414064844720094957}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -603,12 +649,12 @@ MonoBehaviour:
   Path: event:/BGM
   guid: 8b55cb8aa4b5ad46844d4fece6374646
   Banks:
-  - {fileID: -2108116415329067477}
+  - {fileID: 3414064844720094957}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8894157998689490160}
+  - {fileID: 953416031978528908}
   MinDistance: 5.6
   MaxDistance: 84.5
   Length: 343076
@@ -626,19 +672,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 3180589491755376617}
-  - {fileID: -2108116415329067477}
+  - {fileID: 3414064844720094957}
   EditorEvents:
   - {fileID: -6087852069240526804}
   - {fileID: -179630951189876253}
   - {fileID: -8630351929215063733}
   - {fileID: 126288245700361706}
   - {fileID: -1239865188552744155}
+  - {fileID: -8800472399288011658}
+  - {fileID: 1174182656706609294}
+  - {fileID: 7511497624991223730}
+  - {fileID: -6975231871566342088}
+  - {fileID: 2571504967408194808}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2108116415329067477}
+  - {fileID: 3414064844720094957}
   StringsBanks:
   - {fileID: 3180589491755376617}
-  stringsBankWriteTime: 637226813653984319
+  stringsBankWriteTime: 637229865955734670
   cacheVersion: 3
 --- !u!114 &26925983204560982
 MonoBehaviour:
@@ -675,7 +726,7 @@ MonoBehaviour:
   Path: event:/BROOK
   guid: 4fe3e5848219bd43a30185d75e74dcc9
   Banks:
-  - {fileID: -2108116415329067477}
+  - {fileID: 3414064844720094957}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -683,6 +734,46 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 48000
+--- !u!114 &953416031978528908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Music Section
+  m_EditorClassIdentifier: 
+  Name: Music Section
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &1174182656706609294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GUNCLICK
+  m_EditorClassIdentifier: 
+  Path: event:/GUNCLICK
+  guid: 881ef9cd721c2f4e8c7a33cb35496ef9
+  Banks:
+  - {fileID: 3414064844720094957}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 352
 --- !u!114 &1342504251807244148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,6 +850,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &2571504967408194808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/QUAKE
+  m_EditorClassIdentifier: 
+  Path: event:/QUAKE
+  guid: d8acba64d255aa47b23d3d20b257eced
+  Banks:
+  - {fileID: 3414064844720094957}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 14000
 --- !u!114 &2572960278690545095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,11 +907,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/VR ORBITAL FMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637226813653984319
+  lastModified: 637229865955734670
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1038
+    Value: 1258
   Exists: 1
 --- !u!114 &3182747194474286221
 MonoBehaviour:
@@ -837,6 +951,24 @@ MonoBehaviour:
   Path: ../../Documents/FMOD TEST/Build/Desktop/ELLEN HURT.bank
   SubDir: 
   lastModified: 637188395480000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3414064844720094957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/VR ORBITAL FMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637229865958286987
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -957,6 +1089,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &7511497624991223730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GUNSHOT
+  m_EditorClassIdentifier: 
+  Path: event:/GUNSHOT
+  guid: b2f92986a27b5b488aa7bf051a626503
+  Banks:
+  - {fileID: 3414064844720094957}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
 --- !u!114 &8100622911240448006
 MonoBehaviour:
   m_ObjectHideFlags: 0
